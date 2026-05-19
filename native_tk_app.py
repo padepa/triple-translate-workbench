@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Lightweight native desktop UI for the triple translation tool."""
+"""Lightweight native desktop UI for the polyglot translation workbench."""
 
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def enable_dpi_awareness() -> None:
 enable_dpi_awareness()
 
 
-APP_TITLE = "三连翻译工作台"
+APP_TITLE = "多语翻译工作台"
 RECOMMENDED_ENGINES = ["google", "youdao", "alibaba", "bing", "caiyun", "deepl", "yandex"]
 
 COLORS = {
@@ -70,7 +70,7 @@ def resource_path(relative_path: str) -> Path:
     return base / relative_path
 
 
-class TripleTranslateApp(tk.Tk):
+class PolyglotTranslationApp(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
         self._apply_tk_scaling()
@@ -292,7 +292,7 @@ class TripleTranslateApp(tk.Tk):
         action_row = tk.Frame(card, bg=COLORS["card"])
         action_row.grid(row=4, column=0, sticky="ew", pady=(16, 0))
         action_row.columnconfigure(0, weight=1)
-        self.translate_button = self._button(action_row, "开始三连翻译", self._start_translate, kind="primary")
+        self.translate_button = self._button(action_row, "开始回译", self._start_translate, kind="primary")
         self.translate_button.grid(row=0, column=0, sticky="ew", padx=(0, 8))
         self.clear_button = self._button(action_row, "清空", self._clear_text, kind="ghost")
         self.clear_button.grid(row=0, column=1)
@@ -575,7 +575,7 @@ class TripleTranslateApp(tk.Tk):
 
 def main() -> int:
     try:
-        app = TripleTranslateApp()
+        app = PolyglotTranslationApp()
         app.mainloop()
         return 0
     except Exception as exc:  # noqa: BLE001
