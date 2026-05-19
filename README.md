@@ -1,12 +1,14 @@
-# 三连翻译工作台
+# 多语翻译工作台
 
-一个本地中文回译小工具，会把一段中文按下面的链路连续翻译：
+一个本地多语言翻译/回译工作台。当前版本内置一条中文回译链路：
 
 ```text
 中文 -> 英文 -> 日文 -> 中文
 ```
 
 它可以用来观察文本在多轮翻译后的表达变化。结果可能改变原意，请在正式使用前人工核对事实、语气和关键表述。
+
+后续可以扩展为自定义语言链路，例如中文、英文、日文、韩文、法文等不同组合。
 
 ## 功能
 
@@ -41,7 +43,7 @@ start_workbench.bat
 如果已经用 PyInstaller 打包，启动脚本会优先打开：
 
 ```text
-dist\TripleTranslateWorkbench\TripleTranslateWorkbench.exe
+dist\PolyglotTranslationWorkbench\PolyglotTranslationWorkbench.exe
 ```
 
 否则会回退到 `pythonw native_tk_app.py`。
@@ -89,13 +91,13 @@ python -m pip install pyinstaller
 打包：
 
 ```powershell
-pyinstaller --noconfirm .\TripleTranslateWorkbench.spec
+pyinstaller --noconfirm .\PolyglotTranslationWorkbench.spec
 ```
 
 产物位置：
 
 ```text
-dist\TripleTranslateWorkbench\TripleTranslateWorkbench.exe
+dist\PolyglotTranslationWorkbench\PolyglotTranslationWorkbench.exe
 ```
 
 ## 注意
