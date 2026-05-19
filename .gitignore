@@ -41,5 +41,6 @@ run_ui.bat
 run_desktop_app.bat
 run_desktop_app_debug.bat
 三连翻译工作台.spec
+TripleTranslateWorkbench.spec
 打开三连翻译工作台.bat
 桌面版说明.md
