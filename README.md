@@ -18,6 +18,18 @@
 - 支持命令行、剪贴板和图形界面三种使用方式。
 - 针对 Windows 150% 等高 DPI 缩放做了清晰度处理。
 
+## 下载 Windows 版
+
+前往 Releases 下载：
+
+https://github.com/padepa/polyglot-translation-workbench/releases/latest
+
+下载 `PolyglotTranslationWorkbench-v0.1.0-windows-x64.zip`，解压后运行：
+
+```text
+PolyglotTranslationWorkbench.exe
+```
+
 ## 安装依赖
 
 需要 Python 3.10+。
